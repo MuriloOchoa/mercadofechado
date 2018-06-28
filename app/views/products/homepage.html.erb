@@ -1,0 +1,13 @@
+<div class="col-xs-12">
+  <% @products.all.each do |product| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2><%= product.title %></h2>
+        <p>Preço: <%= product.price %></p>
+      </div>
+      <div class="panel-body">
+        <p>Descrição: <%= product.description %></p>
+      </div>
+  <% end %>
+  </div>
+</div>
