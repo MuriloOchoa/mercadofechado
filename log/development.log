@@ -329,3 +329,193 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 80ms (Views: 57.2ms | ActiveRecord: 4.4ms)
 
 
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 19:57:24 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_menu.html.erb (1.1ms)
+Completed 200 OK in 246ms (Views: 220.8ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 19:58:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (7.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_menu.html.erb (1.4ms)
+Completed 200 OK in 83ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 19:58:55 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 19:58:56 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 41ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 20:00:38 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 20:00:40 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 41ms (Views: 39.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-06-28 20:00:54 -0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /var/lib/gems/2.3.0/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_menu.html.erb (1.4ms)
+Completed 200 OK in 241ms (Views: 215.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-28 20:00:59 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_menu.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-28 20:01:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-28 20:03:37 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (256.3ms)
+Completed 500 Internal Server Error in 262ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name_field' for #<ActionView::Helpers::FormBuilder:0x007fba24af43b8>
+Did you mean?  number_field
+               range_field
+               time_field
+               date_field):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :name %>
+    16:     <%= f.name_field :name, autocomplete: "off" %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:16:in `block in _app_views_devise_registrations_new_html_erb___2506931998738604713_70218728410000'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___2506931998738604713_70218728410000'
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-06-28 20:03:47 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (223.6ms)
+Completed 500 Internal Server Error in 227ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name_field' for #<ActionView::Helpers::FormBuilder:0x007fba1007b850>
+Did you mean?  number_field
+               range_field
+               time_field
+               date_field):
+    13: 
+    14:   <div class="field">
+    15:     <%= f.label :name %>
+    16:     <%= f.name_field :name %>
+    17:   </div>
+    18: 
+    19:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:16:in `block in _app_views_devise_registrations_new_html_erb___2506931998738604713_70218556402320'
+app/views/devise/registrations/new.html.erb:3:in `_app_views_devise_registrations_new_html_erb___2506931998738604713_70218556402320'
+Started GET "/categories" for 127.0.0.1 at 2018-06-28 20:11:35 -0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:19
+  Rendered categories/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 40.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/products/new" for 127.0.0.1 at 2018-06-28 20:11:37 -0300
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (9.5ms)
+  Rendered products/new.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 41.4ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-06-28 20:11:38 -0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:19
+  Rendered categories/index.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-06-28 20:11:41 -0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:19
+  Rendered categories/index.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 50.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2018-06-28 20:11:43 -0300
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.6ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  ↳ app/views/products/index.html.erb:20
+  Rendered products/index.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 47.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/categories" for 127.0.0.1 at 2018-06-28 20:11:44 -0300
+Processing by CategoriesController#index as HTML
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:19
+  Rendered categories/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_menu.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 46.7ms | ActiveRecord: 0.4ms)
+
+
