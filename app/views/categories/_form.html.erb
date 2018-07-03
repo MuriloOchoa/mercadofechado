@@ -12,13 +12,13 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :name %>
-    <%= form.text_field :name, size: "60x12", id: :product_title, class: 'form-control' %>
+    <label>Nome da Categoria</label>
+    <%= form.text_field :name, size: "60x12", id: :category_name, class: 'form-control' %>
   </div>
 
   <div class="form-group">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description, class: 'form-control' %>
+    <label>Descrição da Categoria</label>
+    <%= form.text_area :description, id: :category_description, class: 'form-control' %>
   </div>
 
   <div class="actions">
