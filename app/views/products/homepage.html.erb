@@ -34,6 +34,7 @@
 
 
   <% @products.all.each do |product| %>
+
     <div class="panel panel-default">
 
       <div class="panel-heading">
@@ -43,6 +44,7 @@
 
       <div class="panel-body">
         <p>Descrição: <%= product.description %></p>
+        <%= link_to 'Exibir', product, :class => "btn btn-primary" %></button>
       </div>
 
   <% end %>

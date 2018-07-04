@@ -32,6 +32,11 @@
     <%= form.select :category_id, Category.all.collect {|category| [category.description, category.id]}, :class => "form-control" %>
   </div>
 
+  <div class="form-group">
+    <label>Fotos do Produto</label>
+    <%= form.file_field :images, multiple: true %>
+  </div>
+
   <div class="actions">
     <%= form.submit :Cadastrar, class: 'btn btn-success' %>
   </div>

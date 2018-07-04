@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.order('title ASC')
     @products = @products.where(user_id: current_user)        #products onde (user_id == current_user), exibe somente produtos que pertencem ao current_user
   end
 
@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
   end
 
   def homepage
-    @products = Product.all
+    @products = Product.all.order('title ASC')
     @products = @products.where(category: params[:category_id]) unless params[:category_id].blank?
     @products = @products.where("UPPER(products.title) like ?", "%#{params[:search_term].to_s.upcase}%") unless params[:search_term].blank?
   end
@@ -72,13 +72,13 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:title, :description, :price, :category_id)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:title, :description, :price, :category_id, {images: []})
+  end
 end
