@@ -1,10 +1,13 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:homepage, :show]
+  load_and_authorize_resource :except => [:homepage, :show]
 
   # GET /products
   # GET /products.json
   def index
     @products = Product.all
+    @products = @products.where(user_id: current_user)        #products onde (user_id == current_user), exibe somente produtos que pertencem ao current_user
   end
 
   # GET /products/1
@@ -19,6 +22,8 @@ class ProductsController < ApplicationController
 
   def homepage
     @products = Product.all
+    @products = @products.where(category: params[:category_id]) unless params[:category_id].blank?
+    @products = @products.where("UPPER(products.title) like ?", "%#{params[:search_term].to_s.upcase}%") unless params[:search_term].blank?
   end
 
   # GET /products/1/edit
