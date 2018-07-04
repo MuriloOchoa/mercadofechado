@@ -1,19 +1,43 @@
 <div class="col-md-3">
 
   <p>
-    <strong>Title:</strong>
+    <strong>Nome do Produto:</strong>
     <%= @product.title %>
   </p>
 
   <p>
-    <strong>Description:</strong>
+    <strong>Descrição do Produto:</strong>
     <%= @product.description %>
   </p>
 
   <p>
-    <strong>Price:</strong>
+    <strong>Preço do Produto:</strong>
     <%= @product.price %>
   </p>
+
+  <p>
+    <strong>Categoria do Produto:</strong>
+    <%= @product.category.name %>
+  </p>
+
+  <hr>
+
+  <p>
+    <strong>Vendedor:</strong>
+    <%= @product.user.name %>
+  </p>
+
+  <p>
+    <strong>Telefone do Vendedor:</strong>
+    <%= @product.user.telephone %>
+  </p>
+
+  <p>
+    <strong>E-mail do Vendedor:</strong>
+    <%= @product.user.email %>
+  </p>
+
+  <hr>
 
   <% @product.images.each do |image| %>
     <%= image_tag (image.thumb.url) unless image.file.nil? %>
